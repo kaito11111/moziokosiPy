@@ -1,14 +1,14 @@
 #実行
 #streamlit run app.py
 import os
-
+cache_discovery=False
 from google.cloud import speech
 # import io
 
 import streamlit as st
 
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'secret.json'
-cache_discovery=False
+
 def transcribe_file(content, lang='日本語'):
     lang_code = {
         '英語': 'en-US',

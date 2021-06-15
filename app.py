@@ -1,7 +1,7 @@
 #実行
 #streamlit run app.py
 import os
-cache_discovery=False
+
 from google.cloud import speech
 # import io
 

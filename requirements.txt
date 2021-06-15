@@ -1,3 +1,4 @@
 streamlit 
 speech
 storage
+google.cloud

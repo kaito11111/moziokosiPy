@@ -2,8 +2,6 @@
 #streamlit run app.py
 import os
 
-import storage
-
 from google.cloud import speech
 # import io
 

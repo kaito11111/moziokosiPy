@@ -1,4 +1,2 @@
 streamlit 
-speech
-storage
-google.cloud
+google-cloud-speech

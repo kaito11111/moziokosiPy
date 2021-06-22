@@ -1,5 +1,3 @@
-#実行
-#streamlit run app.py
 import os
 
 from google.cloud import speech
@@ -28,6 +26,7 @@ def transcribe_file(content, lang='日本語'):
 
     for result in response.results:
         st.write(result.alternatives[0].transcript)
+        st.write(len(result.alternatives[0].transcript))
 #         print("認識結果: {}".format(result.alternatives[0].transcript))
 
 st.title('文字起こしアプリ')

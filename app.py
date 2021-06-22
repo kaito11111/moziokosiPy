@@ -8,6 +8,7 @@ import streamlit as st
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'secret.json'
 
 def transcribe_file(content, lang='日本語'):
+    mozicunt=0
     lang_code = {
         '英語': 'en-US',
         '日本語': 'ja-JP',
@@ -26,7 +27,9 @@ def transcribe_file(content, lang='日本語'):
 
     for result in response.results:
         st.write(result.alternatives[0].transcript)
-        st.write(len(result.alternatives[0].transcript))
+        mozicunt+=len(result.alternatives[0].transcript)
+    st.write("文字数は")
+    st.write(mozicunt)
 #         print("認識結果: {}".format(result.alternatives[0].transcript))
 
 st.title('文字起こしアプリ')

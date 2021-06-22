@@ -28,8 +28,8 @@ def transcribe_file(content, lang='日本語'):
     for result in response.results:
         st.write(result.alternatives[0].transcript)
         mozicunt+=len(result.alternatives[0].transcript)
-    st.write("文字数は")
-    st.write(mozicunt)
+    st.write("文字数は",mozicunt)
+    #st.write(mozicunt)
 #         print("認識結果: {}".format(result.alternatives[0].transcript))
 
 st.title('文字起こしアプリ')
